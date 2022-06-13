@@ -10,6 +10,7 @@ package com.mycompany.cola;
  */
 public class Perro {
     
+    private int id;
     private String name;
     private String color;
     private String raza;
@@ -28,6 +29,13 @@ public class Perro {
     
     System.out.println("ladra xd");
     
+    }
+    public void mostrar(){
+        System.out.println("ID:"+id);
+        System.out.println("NOMBRE:"+name);
+        System.out.println("EDAD:"+edad);
+        System.out.println("RAZA:"+raza);
+        System.out.println("COLOR:"+color);
     }
     
     public String getRaza(){

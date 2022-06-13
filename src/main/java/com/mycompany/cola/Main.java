@@ -24,7 +24,7 @@ public class Main {
         int n=2;
         int boton;
         System.out.println("##############################################################");
-        System.out.println("Bienvenido al progra para registrar Perros");
+        System.out.println("Bienvenido Dios, aqui puedes crear o eliminar perros");
         System.out.println("##############################################################");
         
         while(n==2){
@@ -39,12 +39,10 @@ public class Main {
                 case 3:
                     break;
                 case 4:
+                      System.err.println("Gracias por usarnos");
+                      n=3;
                     break;
-                case 5:
-                    System.err.println("Gracias por usarnos");
-                    n=3;
-                         
-                    break;
+                
                 default: 
                     System.out.println("opcion incorrecta");
             }
@@ -58,10 +56,9 @@ public class Main {
 
         System.out.println("##############################################################");
         System.out.println("1:Ingresar");
-        System.out.println("2:Modificar");
-        System.out.println("3:Eliminar");
-        System.out.println("4:Mostrar");
-        System.out.println("5:Cerrar");
+        System.out.println("2:Eliminar");
+        System.out.println("3:Mostrar");
+        System.out.println("4:Cerrar");
         System.out.println("##############################################################");
 }
     }

@@ -27,9 +27,14 @@ public class Nodo {
     setInfo(null);
     setSiguiente(null);
     }
+    
+    ////setters and getters
 
     public void setInfo(Object info) {
         this.info = info;
+    }
+    public Object getInfo(){
+        return info;
     }
 
  
