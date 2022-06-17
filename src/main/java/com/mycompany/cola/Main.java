@@ -10,7 +10,6 @@ package com.mycompany.cola;
  * @author elses
  */
  import java.util.*;
-import java.util.ArrayList;
 public class Main {
 
 
@@ -18,13 +17,15 @@ public class Main {
     public static void main(String[] args) {
         
         /////Tabla donde se almacenara todo los registros
-        ArrayList<Perro> registro=new ArrayList<>();
+        Cola colita=new Cola();
+        String nombre, color, raza;
+        int edad;
         /////
         Scanner input=new Scanner(System.in);
         int n=2;
         int boton;
         System.out.println("##############################################################");
-        System.out.println("Bienvenido Dios, aqui puedes crear o eliminar perros");
+        System.out.println("Bienvenido, aqui puedes ingresar y vender perros");
         System.out.println("##############################################################");
         
         while(n==2){
@@ -33,6 +34,21 @@ public class Main {
             input.nextLine();
             switch(boton){
                 case 1:
+                System.out.println("Dame raza");
+                raza=input.nextLine();
+                System.out.println("color");
+                color=input.nextLine();
+                System.out.println("nombre");
+                nombre=input.nextLine();
+                System.out.println("edad");
+                edad=input.nextInt();
+                input.nextLine();
+                colita.insert(new Perro(color,raza,edad,nombre));
+                
+                
+                
+                
+                    
                     break;
                 case 2:
                     break;

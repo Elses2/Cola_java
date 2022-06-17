@@ -10,28 +10,47 @@ package com.mycompany.cola;
  */
 public class Cola {
     private Nodo primero;
-	private Nodo  ultimo;
+    private Nodo  ultimo;
+    private int tam;  
 	
 	public Cola() //Constructor sin parametros de la clase Cola
 	{ 
 		this.primero=null;
 		this.ultimo =null;
 	}
+        public boolean isEmty(){
+        
+            if(primero==null && ultimo==null){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        public void insert(Object dato){
+            Nodo nuevo= new Nodo(dato);
+            if(isEmty()){
+                nuevo=primero=ultimo;
+            }
+            else{
+            
+                ultimo.setSiguiente(nuevo);
+            }
+            ultimo=nuevo;
+            tam ++;
+            
+        }
+        public String eliminate(){
+            
+            if(primero==null){
+                return "vacio";
+            }
+                
+               
+            return "";
+        }
 
-	public void Insertar (Object info) //coloca al final
-	{
-		Nodo nuevo = new Nodo(info);
-		if (this.primero==null)
-		{
-			this.primero=nuevo;
-			this.ultimo=nuevo;
-		}
-		else
-		{
-			this.ultimo.setSiguiente(nuevo);
-			this.ultimo=nuevo;
-		}
-	}
+	
 	
 	public boolean colaVacia() //Devuelve true si la cola esta vacia y false en caso contrario
 	{
