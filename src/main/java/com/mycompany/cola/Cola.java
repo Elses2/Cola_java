@@ -10,7 +10,7 @@ package com.mycompany.cola;
  */
 public class Cola {
     private Nodo primero;
-    private Nodo  ultimo;
+    private Nodo ultimo;
     private int tam;  
 	
 	public Cola() //Constructor sin parametros de la clase Cola
@@ -30,7 +30,7 @@ public class Cola {
         public void insert(Object dato){
             Nodo nuevo= new Nodo(dato);
             if(isEmty()){
-                nuevo=primero=ultimo;
+                primero=ultimo=nuevo;
             }
             else{
             
@@ -45,17 +45,35 @@ public class Cola {
             if(primero==null){
                 return "vacio";
             }
-                
+            else{
+            
+              Nodo aux=primero;
+              primero=primero.getSiguiente();
+              if(primero==null)ultimo=null;
                
-            return "";
+              tam --;
+              return aux.getInfo().toString();
+              
+            }
+            
+                
+                  
+        }
+        public void mostrar(){
+            Nodo aux=primero;
+            
+            while(aux != null){
+            System.out.println(aux.getInfo().toString());
+            aux=aux.getSiguiente();
+            
+            }
+            if(primero== null)System.out.println("esta vacio");
+            
+        
+        
         }
 
 	
-	
-	public boolean colaVacia() //Devuelve true si la cola esta vacia y false en caso contrario
-	{
-		return (this.primero == null);
-	}
 	
 	public Object primero() //Devuelve el dato correspondiente al primer elemento de la cola, y si este no existe, devuelve null
 	{
@@ -74,18 +92,10 @@ public class Cola {
 	}
         ///retorna el numero de elementos que tiene la cola
         public int tamano(){
-        int tam=0;
         return tam;
         }
-        ///Muestra los elementos de la lista
-        public void Mostrar(){
-                Nodo recorrido=primero;
-            for(int i=0;i<tamano();i++){
-                    
-                
-            
-            }
+  
             
         
         }
-}
+

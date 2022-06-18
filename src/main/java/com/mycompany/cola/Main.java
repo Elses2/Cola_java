@@ -26,7 +26,6 @@ public class Main {
         int boton;
         System.out.println("##############################################################");
         System.out.println("Bienvenido, aqui puedes ingresar y vender perros");
-        System.out.println("##############################################################");
         
         while(n==2){
             intro();
@@ -51,11 +50,13 @@ public class Main {
                     
                     break;
                 case 2:
+                    System.out.println(colita.eliminate());
                     break;
                 case 3:
+                    colita.mostrar();
                     break;
                 case 4:
-                      System.err.println("Gracias por usarnos");
+                      System.out.println("Gracias por usarnos");
                       n=3;
                     break;
                 
